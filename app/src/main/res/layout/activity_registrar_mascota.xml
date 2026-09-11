@@ -16,7 +16,8 @@
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/edtNombrePersona"
@@ -24,7 +25,7 @@
         android:layout_height="53dp"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="Ingresa tu nombre"
+        android:hint="@string/edtingresa_tu_nombre"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -37,7 +38,7 @@
         android:layout_height="71dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Ingresa nombre de la mascota"
+        android:hint="@string/edtingresa_nombre_de_la_mascota"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -49,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:text="Categoria:"
+        android:text="@string/txtcategoria"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,21 +69,21 @@
             android:id="@+id/rbCanino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Felino"
+            android:text="@string/rdfelino"
             android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/rbFelino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Canino"
+            android:text="@string/rdcanino"
             android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/rbOtro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Otro" />
+            android:text="@string/rdotro" />
     </RadioGroup>
 
     <CheckBox
@@ -90,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Esterilizacion"
+        android:text="@string/cbesterilizacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDetalles" />
@@ -100,7 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:text="Detalles"
+        android:text="@string/txtdetalles"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +111,7 @@
         android:id="@+id/cbSeguimiento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seguimiento"
+        android:text="@string/cbseguimiento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cbEsterilizacion" />
@@ -119,21 +120,23 @@
         android:id="@+id/btnRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:text="Registrar"
+        android:layout_marginBottom="28dp"
+        android:text="@string/btnregistrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swVacunas" />
 
     <Switch
         android:id="@+id/swVacunas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="¿Vacunas al dia?"
+        android:layout_width="251dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/swvacunas_al_dia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbSeguimiento" />
+        app:layout_constraintTop_toBottomOf="@+id/cbSeguimiento"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
