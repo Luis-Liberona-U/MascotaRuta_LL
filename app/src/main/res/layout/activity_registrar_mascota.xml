@@ -7,4 +7,123 @@
     android:layout_height="match_parent"
     tools:context=".RegistrarMascotaActivity">
 
+    <TextView
+        android:id="@+id/txtTItuloRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Registrar Mascota"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNombrePersona"
+        android:layout_width="228dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Ingresa tu nombre"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTItuloRegistro" />
+
+    <EditText
+        android:id="@+id/edtNombreMascota"
+        android:layout_width="252dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Ingresa nombre de la mascota"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombrePersona" />
+
+    <TextView
+        android:id="@+id/txtCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Categoria:"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreMascota" />
+
+    <RadioGroup
+        android:id="@+id/rgCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCategoria">
+
+        <RadioButton
+            android:id="@+id/rbCanino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Felino"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbFelino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Canino"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbOtro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Otro" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbEsterilizacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Esterilizacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDetalles" />
+
+    <TextView
+        android:id="@+id/txtDetalles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Detalles"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgCategoria" />
+
+    <CheckBox
+        android:id="@+id/cbSeguimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seguimiento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbEsterilizacion" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="Registrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
