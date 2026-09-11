@@ -24,12 +24,17 @@ public class RegistrarMascotaActivity extends AppCompatActivity {
     private CheckBox cbEsterilizacion;
     private CheckBox cbSeguimiento;
 
+    private Switch swVacunas;
+
+
     private EditText edtNombrePersona, edtNombreMascota;
 
     public static final String EXTRA_NOMBREPERSONA = "NOMBREPERSONA";
     public static final String EXTRA_NOMBREMASCOTA = "NOMBREMASCOTA";
     public static final String EXTRA_CATEGORIA = "CATEGORIA";
     public static final String EXTRA_COMPROMISOS = "COMPROMISOS";
+
+    public static final String EXTRA_VACUNA = "VACUNA";
 
 
 
@@ -48,6 +53,7 @@ public class RegistrarMascotaActivity extends AppCompatActivity {
         cbSeguimiento = findViewById(R.id.cbSeguimiento);
         edtNombrePersona = findViewById(R.id.edtNombrePersona);
         edtNombreMascota = findViewById(R.id.edtNombreMascota);
+        swVacunas = findViewById(R.id.swVacunas);
 
 
 
@@ -103,10 +109,23 @@ public class RegistrarMascotaActivity extends AppCompatActivity {
                     ConfirmacionActivity.class
             );
 
+            String vacunas = "";
+
+            if (swVacunas.isActivated()) {
+                vacunas += "Si";
+
+            }
+            else {
+                vacunas += "No";
+            }
+
+
+
             intent.putExtra(EXTRA_NOMBREPERSONA, nombrePersona);
             intent.putExtra(EXTRA_NOMBREMASCOTA, nombreMascota);
             intent.putExtra(EXTRA_CATEGORIA, categoria);
             intent.putExtra(EXTRA_COMPROMISOS, compromisos);
+            intent.putExtra(EXTRA_VACUNA, vacunas);
 
             startActivity(intent);
 
